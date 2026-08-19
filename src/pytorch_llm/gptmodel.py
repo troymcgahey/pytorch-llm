@@ -28,3 +28,17 @@ class DummyGPTModel(nn.Module):
         x = self.final_norm(x)
         logits = self.out_head(x)
         return logits
+
+class DummyTransformerBlock(nn.Module):
+    def __init__(self, cfg):
+        super().__init__()
+
+    def forward(self, x):
+        return x
+
+class DummyLayerNorm(nn.Module):
+    def __init__(self, normalized_shape, eps=le-5):
+        super().__init__()
+
+    def forward(self, x):
+        return x
