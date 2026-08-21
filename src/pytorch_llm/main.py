@@ -1,4 +1,4 @@
-import gptmodel
+from .gptmodel import DummyGPTModel
 
 def main():
 
@@ -8,8 +8,9 @@ def main():
             "emb_dim": 768,         #Embedding dimensions
             "n_heads": 12,          #Number of attention heads
             "n_layers": 12,         #Number of layers
-            "drop_rate": 0.1        #Dropout rate
+            "drop_rate": 0.1,       #Dropout rate
             "qkv_bias": False       #Query-Key-Value bias
+    }
 
     gpp_model = DummyGPTModel(GPT_CONFIG_124M)
 
